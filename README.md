@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coffee Shops App
 
-## Getting Started
+A modern web application for discovering and exploring coffee shops. Built with Next.js, Tailwind CSS, and Supabase.
 
-First, run the development server:
+## 🚀 Features (Planned)
 
+- Browse coffee shops
+- View detailed information about each location
+- Search and filter functionality
+- Responsive design for all devices
+- Interactive map integration
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** Next.js
+- **Styling:** Tailwind CSS
+- **Database:** Supabase
+- **Language:** TypeScript
+- **Authentication:** Supabase Auth (planned)
+
+## 📝 Requirements
+
+- Node.js 18.17 or later
+- npm or yarn
+- Git
+
+## 🏁 Getting Started
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR-USERNAME/coffee-shops-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd coffee-shops-app
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Learn More
+## 🔨 Project Status
 
-To learn more about Next.js, take a look at the following resources:
+Currently in active development. This is a learning project focused on modern web development practices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Learning Goals
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Building a full-stack application with Next.js
+- Implementing responsive design with Tailwind CSS
+- Working with Supabase as a backend service
+- TypeScript development
+- Modern deployment practices
 
-## Deploy on Vercel
+## 📜 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.

@@ -1,6 +1,6 @@
-# Coffee Shops App
+# Dhaka Coffee
 
-A modern web application for discovering and exploring coffee shops. Built with Next.js, Tailwind CSS, and Supabase.
+A modern web application for discovering and exploring coffee shops in Dhaka. Built with Next.js, Tailwind CSS, and Supabase.
 
 ## 🚀 Features (Planned)
 

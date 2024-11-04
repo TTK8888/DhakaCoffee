@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-zinc-600 hover:text-zinc-900 transition:colors"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors duration-200"
             >
               {item.name}
             </Link>
@@ -36,10 +36,10 @@ const Header = () => {
         </div>
 
         {/* mobile menu btn */}
-        <div className="md-hidden">
+        <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-md text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100"
+            className="p-2 rounded-md text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 transition-colors duration-200"
           >
             <span className="sr-only">Open Menu</span>
             <svg
@@ -58,22 +58,37 @@ const Header = () => {
       </nav>
 
       {/* mobile menu panel */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-zinc-50 border-b border-zinc-200">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block px-3 py-2 rounded-md text-base text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`
+      md:hidden
+      fixed
+      inset-x-0
+      top-[64px]
+      bg-zinc-50
+      transform
+      transition-all
+      duration-300
+      ease-in-out
+      ${
+        isMobileMenuOpen
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-full pointer-events-none"
+      }
+      `}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 border-b border-zinc-200">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="block px-3 py-2 rounded-md text-base text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 transition-colors duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </header>
   );
 };

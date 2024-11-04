@@ -18,7 +18,7 @@ const Header = () => {
         {/*Logo/Brand*/}
         <div className="flex items-center">
           <Link href="/" className="text-zinc-800 font-bold text-xl">
-            BrewFinder
+            DhkCoffee
           </Link>
         </div>
 

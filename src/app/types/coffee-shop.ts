@@ -1,26 +1,37 @@
 export type OperatingHours = {
+  id: string;
+  coffee_shop_id: string;
+  day: string;
   open: string;
   close: string;
-  day: string;
+  created_at: string;
 };
 
-export type PriceRange = "low" | "medium" | "high";
+export type Location = {
+  id: string;
+  coffee_shop_id: string;
+  address: string;
+  city: string;
+  postal_code: string;
+  created_at: string;
+};
 
-export interface CoffeeShop {
+export type CoffeeShop = {
   id: string;
   name: string;
   image: string;
   rating: number;
-  numberOfReviews?: number;
-  location: {
-    address: string;
-    city: string;
-    postalCode: string;
-  };
-  operatingHours: OperatingHours[];
-  tags: string[];
-  priceRange: PriceRange;
-}
+  number_of_reviews?: number;
+  price_range: "low" | "medium" | "high";
+  created_at: string;
+  locations: Location[];
+  operating_hours: OperatingHours[];
+  coffee_shop_tags: Array<{
+    tags: {
+      name: string;
+    };
+  }>;
+};
 
 export interface CoffeeShopCardProps {
   shop: CoffeeShop;

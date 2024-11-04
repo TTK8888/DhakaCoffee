@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
-import { CoffeeShopCardProps, PriceRange } from "@/app/types/coffee-shop";
+import { CoffeeShopCardProps } from "@/app/types/coffee-shop";
 
 const CoffeeShopCard = ({ shop }: CoffeeShopCardProps): JSX.Element => {
-  const renderPriceRange = (range: PriceRange) => {
+  const location = shop.locations[0];
+
+  const renderPriceRange = (range: string) => {
     switch (range) {
       case "low":
         return <span className="text-gray-600">$</span>;
@@ -27,7 +29,7 @@ const CoffeeShopCard = ({ shop }: CoffeeShopCardProps): JSX.Element => {
           className="w-full h-full object-cover"
         />
         <div className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full">
-          {renderPriceRange(shop.priceRange)}
+          {renderPriceRange(shop.price_range)}
         </div>
       </div>
       {/* content section*/}
@@ -38,26 +40,26 @@ const CoffeeShopCard = ({ shop }: CoffeeShopCardProps): JSX.Element => {
           <div className="flex items-center">
             <span className="text-yellow-500">★</span>
             <span className="ml-1 text-gray-700">{shop.rating}</span>
-            {shop.numberOfReviews && (
+            {shop.number_of_reviews && (
               <span className="ml-1 text-gray-500 text-sm">
-                ({shop.numberOfReviews})
+                ({shop.number_of_reviews})
               </span>
             )}
           </div>
         </div>
         {/*location*/}
         <p className="text-gray-600 text-sm mb-2">
-          {shop.location.address}, {shop.location.city}
+          {location.address}, {location.city}
         </p>
 
         {/*tags*/}
         <div className="flex flex-wrap gap-1 mb-3">
-          {shop.tags.map((tag) => (
+          {shop.coffee_shop_tags.map((tag) => (
             <span
-              key={tag}
-              className="px-2 py-1 bg-gray-1000 text-gray-600 text-xs rounded-full"
+              key={tag.tags.name}
+              className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
             >
-              {tag}
+              {tag.tags.name}
             </span>
           ))}
         </div>
@@ -67,7 +69,7 @@ const CoffeeShopCard = ({ shop }: CoffeeShopCardProps): JSX.Element => {
           <div className="flex justify-between">
             <span>Today: </span>
             <span>
-              {shop.operatingHours[0].open} - {shop.operatingHours[0].close}
+              {shop.operating_hours[0].open} - {shop.operating_hours[0].close}
             </span>
           </div>
         </div>

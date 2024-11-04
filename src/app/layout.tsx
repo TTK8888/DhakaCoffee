@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from './components/layout/Header'
+import Header from "./components/layout/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,14 +22,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <div className="fade-in-1">
+          <Header />
+        </div>
+        <div className="fade-in-2">{children}</div>
       </body>
     </html>
-  )
+  );
 }

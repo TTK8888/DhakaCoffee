@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-zinc-50 border-b border-zinc-200">
+    <header className="bg-zinc-50 border-b border-zinc-200 fade-in-1">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/*Logo/Brand*/}
         <div className="flex items-center">

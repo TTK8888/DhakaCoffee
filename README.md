@@ -2,7 +2,7 @@
 
 A modern web application for discovering and exploring coffee shops in Dhaka. Built with Next.js, Tailwind CSS, and Supabase.
 
-## 🚀 Features (Planned)
+## 🚀 Features
 
 - Browse coffee shops
 - View detailed information about each location
@@ -43,18 +43,6 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-## 🔨 Project Status
-
-Currently in active development. This is a learning project focused on modern web development practices.
-
-## 📚 Learning Goals
-
-- Building a full-stack application with Next.js
-- Implementing responsive design with Tailwind CSS
-- Working with Supabase as a backend service
-- TypeScript development
-- Modern deployment practices
 
 ## 📜 License
 
